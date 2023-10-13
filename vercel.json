@@ -2,13 +2,25 @@
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "version": 2,
   "builds": [
-    {
-      "src": "src/app.ts",
-      "use": "@vercel/node"
+     {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     },
     {
-      "src": "**/*.njk",
-      "use": "@vercel/static"
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/src/(.*)",
+      "dest": "/src/$1"
+    },
+    {
+      "src": "/views/(.*)",
+      "dest": "/views/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
   ],
   "routes": [
