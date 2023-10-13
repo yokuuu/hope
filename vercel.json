@@ -4,23 +4,23 @@
   "builds": [
      {
       "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "use": "@vercel/node"
     },
     {
       "src": "/public/(.*)",
-      "dest": "/public/$1"
+      "use": "@vercel/node"
     },
     {
       "src": "/src/(.*)",
-      "dest": "/src/$1"
+      "use": "@vercel/node"
     },
     {
       "src": "/views/(.*)",
-      "dest": "/views/$1"
+      "use": "@vercel/node"
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
